@@ -10,12 +10,12 @@ import { IconRefresh, IconSearch, IconSettings, IconMenu2, IconLogin, IconUserPl
 const TopBar: React.FC = () => {
   const { currentUser, isAuthenticated, logout, toggleSidebar } = useAppContext();
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleLogout = async () => {
     await logout();
     setProfileDropdownOpen(false);
-    navigate('/login'); // Redirect to login page after logout
+    router.push('/login');
   };
 
   return (
