@@ -6,12 +6,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { NavItems } from '../../lib/constants'
 import { useAppContext } from '../contexts/AppContext'
-import WatchlistFilter from '../filters/WatchlistFilter';
-import SentimentFilter from '../filters/SentimentFilter';
-import CategoryFilter from '../filters/CategoryFilter';
+import WatchlistFilter from '../filters/WatchlistFilter'
+import SentimentFilter from '../filters/SentimentFilter'
+import CategoryFilter from '../filters/CategoryFilter'
 
 const Sidebar: React.FC = () => {
-  const { currentPage, resetAllFilters, isSidebarOpen } = useAppContext();
+  const { currentPage, resetAllFilters, isSidebarOpen } = useAppContext()
+  const pathname = usePathname()
 
   const showWatchlistFilter = ['saved', 'announcements', 'market_data', 'smart_money'].includes(currentPage);
   const showSentimentFilter = ['saved', 'announcements'].includes(currentPage);
