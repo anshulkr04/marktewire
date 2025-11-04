@@ -1,10 +1,12 @@
 
-import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
-import { User, PageName, Watchlist, Company, Investor, FilterCategory, Sentiment, SavedItem, AnnouncementItem, MarketResultItem, AlertPreference, ApiUser, ApiWatchlistItem } from '../types';
-import { FilterCategoriesData as initialFilterCategoriesData } from '../constants'; 
-import { mockCompanies as staticMockCompanies, mockInvestors as staticMockInvestors, mockSavedItems, mockAnnouncements, mockMarketResults } from '../services/mockData';
-import * as apiService from '../services/apiService';
-import { useNavigate } from 'react-router-dom';
+'use client'
+
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react'
+import { User, PageName, Watchlist, Company, Investor, FilterCategory, Sentiment, SavedItem, AnnouncementItem, MarketResultItem } from '../../lib/types'
+import { FilterCategoriesData as initialFilterCategoriesData } from '../../lib/constants'
+import { mockCompanies as staticMockCompanies, mockInvestors as staticMockInvestors, mockSavedItems, mockAnnouncements, mockMarketResults } from '../lib/mockData'
+import * as apiService from '../lib/api'
+import { useRouter, usePathname } from 'next/navigation'
 
 
 interface AppContextType {
