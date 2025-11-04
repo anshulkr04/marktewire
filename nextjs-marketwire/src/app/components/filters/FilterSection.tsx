@@ -1,6 +1,8 @@
 
-import React, { useState, ReactNode } from 'react';
-import { IconChevronDown, IconChevronUp } from '../../constants';
+'use client'
+
+import React, { useState, ReactNode } from 'react'
+import { IconChevronDown, IconChevronUp } from '../../lib/constants'
 
 interface FilterSectionProps {
   title: string;
