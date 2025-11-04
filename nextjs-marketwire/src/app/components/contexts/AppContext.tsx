@@ -3,7 +3,7 @@
 import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react'
 import { User, PageName, Watchlist, Company, Investor, FilterCategory, Sentiment, SavedItem, AnnouncementItem, MarketResultItem } from '../../lib/types'
 import { FilterCategoriesData as initialFilterCategoriesData } from '../../lib/constants'
-import { mockCompanies as staticMockCompanies, mockInvestors as staticMockInvestors, mockSavedItems, mockAnnouncements, mockMarketResults } from '../lib/mockData'
+import { mockCompanies as staticMockCompanies, mockInvestors as staticMockInvestors, mockSavedItems, mockAnnouncements, mockMarketResults } from '../../lib/mockData'
 import * as apiService from '../lib/api'
 import { useRouter, usePathname } from 'next/navigation'
 
