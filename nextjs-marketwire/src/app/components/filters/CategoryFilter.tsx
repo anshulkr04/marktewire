@@ -1,8 +1,10 @@
 
-import React, { useMemo } from 'react';
-import FilterSection from './FilterSection';
-import { useAppContext } from '../../contexts/AppContext';
-import { FilterCategory } from '../../types';
+'use client'
+
+import React, { useMemo } from 'react'
+import FilterSection from './FilterSection'
+import { useAppContext } from '../contexts/AppContext'
+import { FilterCategory } from '../../lib/types'
 
 const CategoryFilter: React.FC = () => {
   const { 
