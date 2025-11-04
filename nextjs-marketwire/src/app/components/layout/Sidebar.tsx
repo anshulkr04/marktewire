@@ -1,8 +1,11 @@
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { NavItems } from '../../constants';
-import { useAppContext } from '../../contexts/AppContext';
+'use client'
+
+import React from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { NavItems } from '../../lib/constants'
+import { useAppContext } from '../contexts/AppContext'
 import WatchlistFilter from '../filters/WatchlistFilter';
 import SentimentFilter from '../filters/SentimentFilter';
 import CategoryFilter from '../filters/CategoryFilter';
