@@ -1,8 +1,10 @@
 
-import React from 'react';
-import FilterSection from './FilterSection';
-import { Sentiment } from '../../types';
-import { useAppContext } from '../../contexts/AppContext';
+'use client'
+
+import React from 'react'
+import FilterSection from './FilterSection'
+import { Sentiment } from '../../lib/types'
+import { useAppContext } from '../contexts/AppContext'
 
 const sentiments = [
   { value: Sentiment.Positive, label: 'Positive', color: 'bg-green-500' },
