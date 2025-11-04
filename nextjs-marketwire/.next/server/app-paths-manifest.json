@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/announcements/page": "app/announcements/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/login/page": "app/login/page.js",
+  "/market-data/page": "app/market-data/page.js",
+  "/page": "app/page.js",
+  "/register/page": "app/register/page.js",
+  "/saved/page": "app/saved/page.js",
+  "/smart-money/page": "app/smart-money/page.js",
+  "/watchlist/page": "app/watchlist/page.js"
+}
