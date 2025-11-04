@@ -13,10 +13,10 @@ interface AppContextType {
   // Auth state
   token: string | null;
   isAuthenticated: boolean;
-  currentUser: User | null; 
+  currentUser: User | null;
   login: (email: string, password: string) => Promise<void>;
   register: (email: string, password: string, accountType: string) => Promise<void>;
-  logout: () => void;
+  logout: () => Promise<void>;
   isLoadingAuth: boolean;
 
   // Page state
