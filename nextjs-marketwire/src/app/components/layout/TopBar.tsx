@@ -97,11 +97,11 @@ const TopBar: React.FC = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="flex items-center text-sm font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md hover:bg-gray-100">
+            <Link href="/login" className="flex items-center text-sm font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md hover:bg-gray-100">
                 <IconLogin className="w-5 h-5 mr-1 sm:mr-1.5" />
                 <span className="hidden sm:inline">Login</span>
             </Link>
-            <Link to="/register" className="flex items-center text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 sm:px-4 sm:py-2 rounded-md">
+            <Link href="/register" className="flex items-center text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 sm:px-4 sm:py-2 rounded-md">
                 <IconUserPlus className="w-5 h-5 mr-1 sm:mr-1.5" />
                  <span className="hidden sm:inline">Register</span>
                  <span className="sm:hidden">Sign Up</span>
