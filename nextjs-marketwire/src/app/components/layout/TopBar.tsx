@@ -1,8 +1,11 @@
 
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAppContext } from '../../contexts/AppContext';
-import { IconRefresh, IconSearch, IconSettings, IconMenu2, IconLogin, IconUserPlus, IconLogout } from '../../constants'; // Added new icons
+'use client'
+
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useAppContext } from '../contexts/AppContext'
+import { IconRefresh, IconSearch, IconSettings, IconMenu2, IconLogin, IconUserPlus, IconLogout } from '../../lib/constants'
 
 const TopBar: React.FC = () => {
   const { currentUser, isAuthenticated, logout, toggleSidebar } = useAppContext();
