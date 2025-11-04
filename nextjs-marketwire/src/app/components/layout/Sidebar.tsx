@@ -32,22 +32,23 @@ const Sidebar: React.FC = () => {
       >
         {/* Main Navigation */}
         <nav className="px-4 space-y-1 mb-6">
-          {NavItems.map((item) => (
-            <NavLink
-              key={item.name}
-              to={item.path}
-              tabIndex={isSidebarOpen ? 0 : -1} 
-              className={({ isActive }) =>
-                `flex items-center px-3 py-2.5 text-sm font-medium rounded-md transition-colors duration-150
-                ${isActive 
-                  ? 'bg-blue-100 text-blue-700 shadow-sm' 
-                  : 'text-gray-600 hover:bg-gray-200 hover:text-gray-800'}`
-              }
-            >
-              <span className="mr-3">{item.icon}</span>
-              {item.name}
-            </NavLink>
-          ))}
+          {NavItems.map((item) => {
+            const isActive = pathname === item.path
+            return (
+              <Link
+                key={item.name}
+                href={item.path}
+                tabIndex={isSidebarOpen ? 0 : -1}
+                className={`flex items-center px-3 py-2.5 text-sm font-medium rounded-md transition-colors duration-150
+                ${isActive
+                  ? 'bg-blue-100 text-blue-700 shadow-sm'
+                  : 'text-gray-600 hover:bg-gray-200 hover:text-gray-800'}`}
+              >
+                <span className="mr-3">{item.icon}</span>
+                {item.name}
+              </Link>
+            )
+          })}
         </nav>
 
         {/* Dynamic Filter Area */}
