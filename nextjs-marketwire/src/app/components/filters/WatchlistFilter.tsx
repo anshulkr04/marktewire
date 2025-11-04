@@ -1,7 +1,9 @@
 
-import React from 'react';
-import FilterSection from './FilterSection';
-import { useAppContext } from '../../contexts/AppContext';
+'use client'
+
+import React from 'react'
+import FilterSection from './FilterSection'
+import { useAppContext } from '../contexts/AppContext'
 
 const WatchlistFilter: React.FC = () => {
   const { watchlists, selectedWatchlistFilters, setSelectedWatchlistFilters } = useAppContext();
